@@ -19,6 +19,7 @@
 /**
  * This function reverses the input string and prints it to the console.
  * @param {string} str - The string to be reversed.
+ * @returns {void}
  * @example
  * printReverse("Hello World"); // "dlroW olleH"
  */
@@ -26,5 +27,6 @@ function printReverse(str) {
     console.log(str.split('').reverse().join(''));
 }
 
+console.log("Il seguente è l'output del file script-base.js:");
 // Calling the function with different arguments to print different reversed strings.
 printReverse("Hello World"); // "dlroW olleH"
