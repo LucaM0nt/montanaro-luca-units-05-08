@@ -19,11 +19,6 @@ its end, unless it already ends in 'ing', in which case it should add 'ly' inste
 ### `verbing(str)`
 
 - **Description**: This function modifies the input string based on its length and ending.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `verbing` function which modifies the input string based on its length and ending. |
-
 - **Output**: Returns the modified string based on the following rules:
   - If the string length is at least 3 and it ends with 'ing', 'ly' is added to the end.
   - If the string length is at least 3 and it does not end with 'ing', 'ing' is added to the end.

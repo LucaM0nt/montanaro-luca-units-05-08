@@ -20,11 +20,6 @@ first character have been replaced with '*', except for the first character itse
 ### `fixStart(str)`
 
 - **Description**: This function replaces all occurrences of the first character in the input string (except the first one) with '*'.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `fixStart` function which replaces all occurrences of the first character in the input string (except the first one) with '*'. |
-
 - **Output**: Returns the modified string with '*' replacing all occurrences of the first character except the first one.
 
 ## Example Output 📜

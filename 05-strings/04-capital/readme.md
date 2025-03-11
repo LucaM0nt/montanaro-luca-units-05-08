@@ -18,26 +18,12 @@ string "My Name Is John"
 
 ## Functions 📋
 
-### `capital(str)`
+| Function       | Description                                                                                           | Output                                                   |
+|----------------|-------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| `capital(str)` | This function capitalizes the first letter of the provided string.                                    | Returns the string with the first letter capitalized.    |
+| `capital2(str)`*| This function capitalizes the first letter of each word in the provided string.                       | Returns the string with the first letter of each word capitalized. |
 
-- **Description**: This function capitalizes the first letter of the provided string.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `capital` function which capitalizes the first letter of the string. |
-
-- **Output**: Returns the string with the first letter capitalized.
-
-### `capital2(str)`
-
-- **Description**: This function capitalizes the first letter of each word in the provided string.
-- **Note**: This function name has been decided by the assignment, but it is not a proper name. A good name could have been `capitalAll` because of specified.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `capital2` function which capitalizes the first letter of each word in the string. |
-
-- **Output**: Returns the string with the first letter of each word capitalized.
+- **Note***: The function name `capital2` has been decided by the assignment, but it is not a proper name. A good name could have been `capitalAll` because of specified.
 
 ## Example Output 📜
 

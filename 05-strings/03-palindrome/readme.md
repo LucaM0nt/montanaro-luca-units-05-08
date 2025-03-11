@@ -27,8 +27,8 @@ should return false
 
 | File                      | Description                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
-| `script-no-reverse-func.js` | Checks if the string is a palindrome without using the `reverse` function.  |
 | `script-base.js`          | Checks if the string is a palindrome using the `reverse` function from exercise 02-reverse. |
+| `script-no-reverse-func.js` | Checks if the string is a palindrome without using the `reverse` function.  |
 
 - **Output**: Returns `true` if the string is a palindrome, `false` otherwise.
 

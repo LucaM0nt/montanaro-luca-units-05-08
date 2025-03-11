@@ -21,9 +21,9 @@ This exercise demonstrates the use of string manipulation in JavaScript. The `pr
 
 | File                      | Description                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
-| `script-no-methods.js`    | Reverses the string without using string methods.                           |
-| `script-no-array-methods.js` | Reverses the string without using array methods.                          |
 | `script-base.js`          | Reverses the string using string and array methods.                         |
+| `script-no-array-methods.js` | Reverses the string without using array methods.                          |
+| `script-no-methods.js`    | Reverses the string without using string methods.                           |
 
 - **Output**: Prints the reversed string to the console.
 

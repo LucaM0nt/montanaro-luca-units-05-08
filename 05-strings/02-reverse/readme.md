@@ -24,9 +24,9 @@ methods (submit separate files for each solution)
 
 | File                      | Description                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
-| `script-no-methods.js`    | Reverses the string without using any methods.                              |
-| `script-no-array-methods.js` | Reverses the string without using array methods.                          |
 | `script-base.js`          | Reverses the string using string and array methods.                         |
+| `script-no-array-methods.js` | Reverses the string without using array methods.                          |
+| `script-no-methods.js`    | Reverses the string without using any methods.                              |
 
 - **Output**: Returns the reversed string.
 

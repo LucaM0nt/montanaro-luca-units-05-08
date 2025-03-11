@@ -20,11 +20,6 @@ space) slicing out and swapping the first 2 characters of each
 ### `mixup(str1, str2)`
 
 - **Description**: This function swaps the first character of each input string and concatenates the results.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `mixup` function which swaps the first character of each input string and concatenates the results. |
-
 - **Output**: Returns a new string with the first characters of `str1` and `str2` swapped.
 
 ## Example Output 📜

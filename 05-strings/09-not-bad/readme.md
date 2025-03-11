@@ -22,11 +22,6 @@ sentence
 ### `notBad(str)`
 
 - **Description**: This function replaces the substring 'not ... bad' with 'good' if 'not' appears before 'bad'.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `notBad` function which replaces the substring 'not ... bad' with 'good' if 'not' appears before 'bad'. |
-
 - **Output**: Returns the modified string with 'not ... bad' replaced by 'good' if 'not' appears before 'bad'.
 
 ## Example Output 📜

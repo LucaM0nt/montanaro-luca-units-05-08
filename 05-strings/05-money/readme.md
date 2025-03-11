@@ -16,25 +16,11 @@ This exercise demonstrates the use of string manipulation and basic arithmetic o
 
 ## Functions 📋
 
-### `dollarsConverter(dollarsAmount)`
+| Function                  | Description                                                                                           | Output                                                   |
+|---------------------------|-------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| `dollarsConverter(dollarsAmount)` | This function converts the provided dollar amount to euros.                                    | Returns the equivalent amount in euros or 'Invalid input' if the input is invalid.    |
+| `money(amount)`           | This function returns a string describing the conversion of the provided dollar amount to euros.      | Returns a string describing the conversion of the amount to euros or 'Invalid input' if the input is invalid. |
 
-- **Description**: This function converts the provided dollar amount to euros.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `dollarsConverter` function which converts the dollar amount to euros. |
-
-- **Output**: Returns the equivalent amount in euros or 'Invalid input' if the input is invalid.
-
-### `money(amount)`
-
-- **Description**: This function returns a string describing the conversion of the provided dollar amount to euros.
-
-| File                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| `script.js`               | Contains the `money` function which returns a string describing the conversion of the dollar amount to euros. |
-
-- **Output**: Returns a string describing the conversion of the amount to euros or 'Invalid input' if the input is invalid.
 
 ## Example Output 📜
 
