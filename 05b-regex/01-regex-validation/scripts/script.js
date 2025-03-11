@@ -33,7 +33,7 @@
  * console.log(validateEmail("test@example.com")); // true
  */
 function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,4}$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(email);
 }
 
 /**
