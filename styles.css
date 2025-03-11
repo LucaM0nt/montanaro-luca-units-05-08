@@ -119,4 +119,25 @@ footer {
     padding: 1rem 0;
     width: 100%;
     margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Stile per il nome con icona GitHub */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.profile a {
+    display: flex;
+    align-items: center;
 }
