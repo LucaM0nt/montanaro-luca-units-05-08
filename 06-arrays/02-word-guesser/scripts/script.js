@@ -1,30 +1,106 @@
 let wordToGuess = ["C", "A", "T"];
-let guessedLetters = ["_", "_", "_"];
+let guessedLetters = "_".repeat(wordToGuess.length).split("");
+
+const maxGuessNumber = 6;
+let guessesLeft = maxGuessNumber;
+let isGameRunning = true;
+let usedLetters = [];
+
+function getRandomLetter() {
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    return alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+}
+
+const hangmanImg = [
+    `
+    +---+
+    |    
+    |    
+    |    
+    ===  `,
+    `
+    +---+
+    |   O
+    |    
+    |    
+    ===  `,
+    `
+    +---+
+    |   O
+    |   |
+    |    
+    ===  `,
+    `
+    +---+
+    |   O
+    |  /|
+    |    
+    ===  `,
+    `
+    +---+
+    |   O
+    |  /|\\
+    |    
+    ===  `,
+    `
+    +---+
+    |   O
+    |  /|\\
+    |  /  
+    ===  `,
+    `
+    +---+
+    |   O
+    |  /|\\
+    |  / \\
+    ===  `
+  ];
 
 function guessLetter (letter){
-    const maxGuessNumber = 6;
-    let guessesLeft = maxGuessNumber;
     console.log (`You have chosen the letter ${letter}`);
+
     if (wordToGuess.includes(letter)){ 
-        let letterIndex = wordToGuess.indexOf(letter);
-        guessedLetters[letterIndex] = letter;
-        wordToGuess[letterIndex] = "_";
-        console.log(`Congratulations! You found a letter!
-            Your current situation is: ${guessedLetters.join("")}
-            You have ${maxGuessNumber} guesses left.\n\n`);
-        if (!wordToGuess.includes("_")){
-            console.log(`Congratulations! You found the word!`);
+        guessedLetters = guessedLetters.map((guessedLetter, letterIndex) => {
+            return wordToGuess.at(letterIndex) === letter ? letter : guessedLetter }
+        );
+
+        if (!guessedLetters.includes("_")){
+            console.log(`
+-------------------------------------
+Congratulations! You found the word!
+The word was ${wordToGuess.join("")}.
+-------------------------------------
+                `);
+            return;
         }
+
+        console.log(`Congratulations! You found a letter!
+            ${hangmanImg.at(maxGuessNumber - guessesLeft)}
+Your current situation is: ${guessedLetters.join("")}
+You have ${guessesLeft} guesses left.\n\n`);
+
     } else {
         guessesLeft -= 1;
         console.log(`Sorry, you didn't find a letter!
-            Your current situation is: ${guessedLetters.join("")}
-            You have ${maxGuessNumber} guesses left.\n\n`);
+            ${hangmanImg.at(maxGuessNumber - guessesLeft)}
+    Your current situation is: ${guessedLetters.join("")}
+    You have ${guessesLeft} guesses left.\n\n`);
+    }
+
+    if (guessesLeft === 0) {
+        console.log(`
+-------------------------------------
+GAME OVER! The word was ${wordToGuess.join("")}.
+-------------------------------------
+`);
+        isGameRunning = false;
     }
 }
 
-guessLetter("A");
-guessLetter("B");
-guessLetter("C");
-guessLetter("D");
-guessLetter("T");
+while (isGameRunning){
+    let letter = getRandomLetter();
+    if (!(letter in usedLetters)){
+        usedLetters.push(letter);
+        guessLetter(letter);
+    }
+}
