@@ -1,4 +1,39 @@
+/**
+ * @file script.js
+ * @description This file contains the JavaScript code for validating credit card numbers.
+ * @date March 2025
+ * @author Luca Montanaro
+ * 
+ * @remarks
+ * This exercise demonstrates the use of objects, strings, and arrays in JavaScript to validate credit card numbers.
+ * The `validateCreditCard` function checks if a credit card number meets specific criteria:
+ * - It must contain exactly 16 digits.
+ * - The last digit must be even.
+ * - The sum of all digits must be greater than 16.
+ * - All digits cannot be the same.
+ * 
+ * function validateCreditCard - Validates a credit card number based on the above criteria.
+ * 
+ * The validateCreditCard function takes a credit card number as a parameter.
+ * It returns an object containing the credit card number, its validity, and any errors found during validation.
+ */
+
+/**
+ * Validates a credit card number based on specific criteria.
+ * @param {string} creditCard - The credit card number to validate.
+ * @returns {void} - Logs the validation result to the console.
+ * @example
+ * validateCreditCard("9999-7777-8888-0000");
+ * validateCreditCard("6666/6666/6666/1666");
+ */
 function validateCreditCard(creditCard) {
+  /**
+   * Object to store validation results.
+   * @type {Object}
+   * @property {string} number - The original credit card number.
+   * @property {boolean} isValid - Whether the credit card number is valid.
+   * @property {string} error - Any errors found during validation.
+   */
   let creditCardValidation = {
     number: creditCard,
     isValid: true,
@@ -37,21 +72,23 @@ function validateCreditCard(creditCard) {
     creditCardValidation.error += "All digits cannot be the same.\n";
   }
 
+  // If no errors, set a success message
   if (creditCardValidation.error === "") {
     creditCardValidation.error = "No errors, credit card number is valid.\n";
   }
 
-  message = `
+  // Log the validation result
+  const message = `
   ================================================
   = number : ${creditCardValidation.number}
   = isValid : ${creditCardValidation.isValid}
   = error : ${creditCardValidation.error.trim()}
   ================================================
   `;
-
   console.log(message);
 }
 
+// Example usage
 validateCreditCard("9999-7777-8888-0000");
 validateCreditCard("6666/6666/6666/1666");
 validateCreditCard("a92332119c011112");

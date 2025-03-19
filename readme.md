@@ -7,15 +7,15 @@ This folder contains the exercises for my JavaScript course.
 
 ## How to access the exercises 🚀
 
-The exercises can be individually accessed through the `index.html` in their respective folder.
-Alternatively, there's a handy `index.html` in the main folder to allow quick and easy access to all of them and their respective documentation.
+The exercises can be individually accessed through the `index.html` in their respective folder.  
+Alternatively, there's a handy [`index.html`](./index.html) in the main folder to allow quick and easy access to all of them and their respective documentation.
 
 ## Structure 🗂️
 
 - **Unit 05**: Strings
 - **Unit 05b**: Regex
 - **Unit 06**: Arrays
-- **Unit 07**: ???
+- **Unit 07**: Objects
 - **Unit 08**: ???
 
 ## Technologies Used 🛠️

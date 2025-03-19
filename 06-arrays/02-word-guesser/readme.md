@@ -6,7 +6,7 @@ This exercise demonstrates the use of arrays, random number generation, and stri
 
 > 1. Create two arrays:
 >    - one for the letters of the word (e.g. 'C', 'A', 'T')
->    - Another for the current guessed letters (start with '_', '_', '\_' and add the correct letters to it).
+>    - Another for the current guessed letters (start with '_', '_', '_' and add the correct letters to it).
 > 2. Write a function called guessLetter that should:
 >    - Take one parameter, a letter.
 >    - Have a maximum number of guesses (e.g. 6)
@@ -49,7 +49,7 @@ This exercise demonstrates the use of arrays, random number generation, and stri
 - **`isGameRunning`**: Boolean indicating whether the game is still active.
 - **`usedLetters`**: Array of letters that have already been guessed.
 - **`totalPoints`**: The player's total score.
-- **`hangmanImg`**: Array of ASCII images representing the hangman stages.
+- **`hangmanImg`**: Array of special characters images representing the hangman stages.
 
 ## Example Output 📜
 
