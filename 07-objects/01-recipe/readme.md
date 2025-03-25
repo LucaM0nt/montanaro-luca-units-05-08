@@ -5,8 +5,9 @@ This exercise demonstrates how to create and log information about recipes using
 ## Assignment 📝
 
 > - Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings)
-> - On separate lines (one console.log statement for each), log the recipe information
-> - **Bonus**: Create an array that holds several recipes and log them all.
+> - On separate lines (one console.log statement for each), log the recipe information  
+>
+> **Bonus**: Create an array that holds several recipes and log them all.
 
 ## Usage 🛠️
 
@@ -29,8 +30,31 @@ This exercise demonstrates how to create and log information about recipes using
 2. **Logging Recipe Details**:
    - The script logs the details of each recipe to the console using separate `console.log` statements for each property.
 
-3. **Bonus Feature**:
-   - The script includes an array of multiple recipes and logs the details of all recipes in the array.
+## Example Output 📤
+
+```js
+recipes.forEach((recipe) => {
+  console.log(`recipe title: ${recipe.title}`);
+  console.log(`serves: ${recipe.serves}`);
+  console.log(`ingredients: ${recipe.ingredients.join(", ")}`);
+  console.log("-----------------");
+});
+```
+
+When the script is executed, the following output is logged to the console:
+```
+recipe title: Sushi
+serves: 1
+ingredients: rice, nori, soy sauce, wasabi, fish
+-----------------
+recipe title: Pizza
+serves: 2
+ingredients: dough, tomato sauce, cheese, pepperoni
+-----------------
+recipe title: Burger
+serves: 1
+ingredients: bun, beef patty, lettuce, tomato, onion
+```
 
 ## Author ✍️
 

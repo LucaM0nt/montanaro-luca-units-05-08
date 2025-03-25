@@ -31,6 +31,27 @@ This exercise demonstrates how to manage a reading list using JavaScript. The sc
    - The script iterates over the `bookList` array using the `forEach` method.
    - For each book, it logs whether the book has already been read or still needs to be read.
 
+## Example Output 📤
+
+```js
+bookList.forEach((book) => {
+  let bookInfo = `${book.title} by ${book.author}`;
+  if (book.alreadyRead) {
+    console.log(`You already read ${bookInfo}`);
+  } else {
+    console.log(`You still need to read ${bookInfo}`);
+  }
+});
+```
+
+When the script is executed, the following output is logged to the console:
+
+```
+You already read The Hobbit by J.R.R. Tolkien
+You still need to read The Lord of the Rings by J.R.R. Tolkien
+You already read Harry Potter and the Philosopher's Stone by J.K. Rowling
+```
+
 ## Author ✍️
 
 **Luca Montanaro** `WDV 24-26`  

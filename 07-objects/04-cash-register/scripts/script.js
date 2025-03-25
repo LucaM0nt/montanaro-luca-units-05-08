@@ -49,4 +49,4 @@ function cashRegister(cart) {
 
 // Example usage
 let cart = ["orange", "milk", "rice"];
-console.log(cashRegister(cart)); // "3.46"
+console.log(`The total cost of your cart, containing ${cart.join(", ")}, is $${cashRegister(cart)}.`); // "The total cost of your cart containing orange, milk, rice is $3.46."  

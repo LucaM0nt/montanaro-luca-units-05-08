@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#logTopChoices">logTopChoices</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#topChoices">topChoices</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#recipes">recipes</a></span></li>
 </nav>
 
 <div id="main">
@@ -112,155 +112,24 @@
         
             
 <div class="section-members">
-<h4 class="name" id="topChoices"><span class="type-signature"></span>topChoices<span class="type-signature"> :Array.&lt;string></span></h4>
+<h4 class="name" id="recipes"><span class="type-signature"></span>recipes<span class="type-signature"> :Array.&lt;Object></span></h4>
 
 
 
 
 <div class="description">
-    Array of top color choices.
+    Array of recipes.Each recipe is represented as an object with the following properties:- `title`: The name of the recipe.- `serves`: The number of servings the recipe makes.- `ingredients`: An array of ingredients required for the recipe.
 </div>
 
 
 
 
 
-<dl class="details">
+    <h5 class="subsection-title">Properties:</h5>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="script.js.html">script.js</a>, <a href="script.js.html#line22">line 22</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type"><code>Array.&lt;string></code></span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</div>
-
-        
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-<div class="section-method">
-
-    
-
-    <h4 class="name" id="logTopChoices"><span class="type-signature"></span>logTopChoices<span class="signature">(topChoice, index)</span><span class="type-signature"> &rarr; {void}</span></h4>
-
-    
-
-
-
-<div class="description">
-    Logs each top color choice with its ranking.
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="script.js.html">script.js</a>, <a href="script.js.html#line32">line 32</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="props">
     <thead>
     <tr>
         
@@ -282,7 +151,7 @@
 
         <tr>
             
-                <td class="name"><code>topChoice</code></td>
+                <td class="name"><code>title</code></td>
             
 
             <td class="type">
@@ -298,17 +167,16 @@
 
             
 
-            <td class="description last">
-                The color choice.
-                
-            </td>
+            <td class="description last">The name of the recipe.</td>
         </tr>
+
+        
 
     
 
         <tr>
             
-                <td class="name"><code>index</code></td>
+                <td class="name"><code>serves</code></td>
             
 
             <td class="type">
@@ -324,11 +192,35 @@
 
             
 
-            <td class="description last">
-                The index of the color choice in the array.
-                
-            </td>
+            <td class="description last">The number of servings the recipe makes.</td>
         </tr>
+
+        
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ingredients</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Array.&lt;string></code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The list of ingredients for the recipe.</td>
+        </tr>
+
+        
 
     
     </tbody>
@@ -337,48 +229,67 @@
 
 
 
+<dl class="details">
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-<div class="section-returns">
-<h5>Returns:</h5>
+    
 
-        
+    
 
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type"><code>void</code></span>
+    
 
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="script.js.html">script.js</a>, <a href="script.js.html#line24">line 24</a>
+    </li></ul></dd>
+    
 
-    </dd>
+    
+
+    
+
+    
 </dl>
 
 
-    
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><code>Array.&lt;Object></code></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
 </div>
 
-
-
-<div class="section-examples">
-<h5>Example</h5>
-
-    <pre class="prettyprint"><code>topChoices.forEach(logTopChoices);</code></pre>
-
-</div>
-
-</div>
         
+    
+
     
 
     
@@ -396,7 +307,7 @@
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Wed Mar 19 2025 15:03:37 GMT+0100 (Ora standard dell’Europa centrale) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Mar 25 2025 10:08:35 GMT+0100 (Ora standard dell’Europa centrale) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

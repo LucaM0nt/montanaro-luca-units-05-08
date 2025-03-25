@@ -43,10 +43,15 @@ This exercise demonstrates how to calculate the total cost of items in a shoppin
 
 ## Example Output 📤
 
+```js
+let cart = ["orange", "milk", "rice"];
+console.log(`The total cost of your cart, containing ${cart.join(", ")}, is $${cashRegister(cart)}.`);
+```
+
 When the script is executed, the following output is logged to the console:
 
 ```
-3.46
+The total cost of your cart, containing orange, milk, rice, is $3.46.
 ```
 
 ## Author ✍️

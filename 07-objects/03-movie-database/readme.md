@@ -38,6 +38,14 @@ Dragon lasts for 30 minutes. Stars: Puff, Jackie, Living Sneezes."
 
 ## Example Output 📤
 
+```js
+movieList.forEach((movie) => {
+  console.log(
+    `${movie.title} lasts for ${movie.duration} minutes. Stars: ${movie.stars.join(", ")}`
+  );
+});
+```
+
 When the script is executed, the following output is logged to the console:
 
 ```
