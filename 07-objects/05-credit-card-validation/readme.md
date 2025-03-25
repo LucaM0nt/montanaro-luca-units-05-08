@@ -51,6 +51,11 @@ numbers according to the following rules:
 
 ## Example Output 📤
 
+```js
+validateCreditCard("9999-7777-8888-0000");
+validateCreditCard("4444444444444444");
+```
+
 When the script is executed, the following output is logged to the console:
 
 ```

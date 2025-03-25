@@ -44,7 +44,6 @@ This exercise demonstrates how to calculate the total cost of items in a shoppin
 ## Example Output 📤
 
 ```js
-let cart = ["orange", "milk", "rice"];
 console.log(`The total cost of your cart, containing ${cart.join(", ")}, is $${cashRegister(cart)}.`);
 ```
 
