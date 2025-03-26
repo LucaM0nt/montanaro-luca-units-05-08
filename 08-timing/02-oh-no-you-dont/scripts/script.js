@@ -14,8 +14,8 @@ function squareNumber(num) {
 const timerId = setTimeout(squareNumber, 10000, 4);
 
 function cancelTimer() {
-    clearTimeout(timerId, 5000);
+    clearTimeout(timerId);
     console.log("Timer canceled!");
 }
 
-cancelTimer();
+setTimeout(cancelTimer,5000);

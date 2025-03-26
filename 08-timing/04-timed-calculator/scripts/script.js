@@ -59,12 +59,24 @@ return area;
  * calculator(10); // Returns the final percentage and logs intermediate results
  */
 function calculator(num) {
-    let half = halfNumber(num);
-    let squared = squareNumber(half);
-    let area = areaOfCircle(squared);
-    let percentage = percentOf(area, squared);
-    return percentage;
+  console.log("Halfing the number...");
+  let half = halfNumber(num); 
+  let squared
+  let area
+  let percentage
+  setTimeout(() => {console.log("Squaring the halved number..."); squared = squareNumber(half); } , 3000);
+  setTimeout(() => {console.log("Calculating area of circle..."); area = areaOfCircle(squared);} , 6000);
+  setTimeout(() => {console.log("Doing the percentage..."); percentage = percentOf(area, squared);} , 9000);
 }
 
-// Calling the function with an example value to see the result of the calculations.
-console.log(calculator(10)); // Logs the results of each step and returns the final percentage
+calculator(4)
+
+// Logs:
+// Halfing the number...
+// Half of 4 is 2
+// Squaring the halved number...
+// The result of squaring the number 2 is 4
+// Calculating area of circle...
+// The area for a circle with radius 4 is 50.27
+// Doing the percentage...
+// 4 is 100.00% of 4
