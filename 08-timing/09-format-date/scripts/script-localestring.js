@@ -45,6 +45,7 @@ function formatDate(date) {
     }
 }
 
+console.log ("using script-localestring.js");
 // Example usage:
 console.log(formatDate(new Date(new Date() - 500))); // "right now"
 console.log(formatDate(new Date(new Date() - 30000))); // "30 sec. ago"

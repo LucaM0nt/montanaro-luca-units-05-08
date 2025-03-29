@@ -1,47 +1,52 @@
 /**
  * @file script.js
- * @description This file contains the JavaScript code 
- * for demonstrating the use of `setTimeout` and `clearTimeout` functions.
+ * @description This file contains the JavaScript code for determining the day of the week in different languages.
  * @date March 2025
  * @author Luca Montanaro
  * 
  * @remarks
- * This exercise demonstrates how to schedule a function to execute after a delay 
- * using `setTimeout` and how to cancel it using `clearTimeout`.
- * The `squareNumber` function calculates the square of a number and logs the result.
- * A timer is set to call `squareNumber` after 10 seconds, 
- * but it is canceled after 5 seconds using the `cancelTimer` function.
+ * This script demonstrates how to use arrays and the `Date` object to retrieve the current day of the week in short format.
+ * It supports English (`en`) and Italian (`it`) languages. If an unsupported language is provided, it returns an error message.
  */
 
 /**
- * Calculates the square of a number and logs the result.
- * @param {number} num - The number to be squared.
- * @returns {number} - Returns the square of the number.
- * @example
- * squareNumber(4); // Logs "The result of squaring the number 4 is 16" and returns 16
+ * Array of short weekday names in English.
+ * @type {string[]}
  */
-function squareNumber(num) {
-    let squaredNumber = num * num;
-    console.log(`The result of squaring the number ${num} is ${squaredNumber}`);
-    return squaredNumber;
+const weekdaysShortEng = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+
+/**
+ * Array of short weekday names in Italian.
+ * @type {string[]}
+ */
+const weekdaysShortIt = ['DO', 'LU', 'MA', 'ME', 'GI', 'VE', 'SA'];
+
+/**
+ * Gets the short name of the current weekday in the specified language.
+ * @param {Date} date - The date object to retrieve the day of the week from.
+ * @param {string} lang - The language code ('en' for English, 'it' for Italian).
+ * @returns {string} - The short name of the weekday in the specified language, or an error message if the language is invalid.
+ * @example
+ * let currentDate = new Date();
+ * console.log(getWeekDay(currentDate, 'it')); // Logs: 'DO'
+ * console.log(getWeekDay(currentDate, 'en')); // Logs: 'SU'
+ * console.log(getWeekDay(currentDate, 'es')); // Logs: 'Invalid language'
+ */
+function getWeekDay(date, lang) {
+    switch (lang) {
+        case 'it':
+            return weekdaysShortIt[date.getDay()];
+        case 'en':
+            return weekdaysShortEng[date.getDay()];
+        default:
+            return 'Invalid language';
+    }
 }
 
-/**
- * Timer ID for the `setTimeout` call to execute `squareNumber`.
- * @type {number}
- */
-const timerId = setTimeout(squareNumber, 10000, 4);
-
-/**
- * Cancels the timer set for the `squareNumber` function and logs a message.
- * @returns {void}
- * @example
- * cancelTimer(); // Logs "Timer canceled!"
- */
-function cancelTimer() {
-    clearTimeout(timerId);
-    console.log("Timer canceled!");
-}
-
-// Set a timeout to cancel the timer after 5 seconds
-setTimeout(cancelTimer, 5000);
+// Example usage
+let currentDate = new Date();
+console.log("Italian short day");  
+console.log(getWeekDay(currentDate, 'it'));  // Logs: 'DO'
+console.log("English short day");  
+console.log(getWeekDay(currentDate, 'en'));  // Logs: 'SU'
+console.log(getWeekDay(currentDate, 'es'));  // Logs: 'Invalid language'

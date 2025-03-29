@@ -16,7 +16,8 @@ Alternatively, there's a handy [`index.html`](./index.html) in the main folder t
 - **Unit 05b**: Regex
 - **Unit 06**: Arrays
 - **Unit 07**: Objects
-- **Unit 08**: ???
+- **Unit 08**: Timing
+- **Unit 08b**: Event Loop
 
 ## Technologies Used 🛠️
 
