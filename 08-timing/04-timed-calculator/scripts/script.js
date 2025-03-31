@@ -7,8 +7,8 @@
  * @remarks
  * This script demonstrates the use of `setTimeout` to execute 
  * a series of calculations with delays between each step.
- * The `calculator` function and the helper functions 
- * (`squareNumber`, `halfNumber`, `percentOf`, `areaOfCircle`) are reused from a previous exercise.
+ * The `calculator` function and the helper functions (`squareNumber`, `halfNumber`, `percentOf`, `areaOfCircle`) 
+ * are reused from a previous exercise.
  * The script performs the following steps:
  * 1. Halves a number.
  * 2. Squares the halved number.

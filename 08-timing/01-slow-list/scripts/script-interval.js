@@ -29,7 +29,7 @@ let randomAnimals = [
  * Index variable to track the current animal being logged.
  * @type {number}
  */
-let i = 0;
+let animalArrayIndex = 0;
 
 /**
  * Logs each animal in the `randomAnimals` array to the console with a delay of 1 second between each log.
@@ -37,9 +37,9 @@ let i = 0;
  * @returns {void}
  */
 const intervalId = setInterval(() => {
-    if (i < randomAnimals.length) {
-        console.log(randomAnimals[i]); // Logs the current animal in the array
-        i++; // Increment the index to log the next animal
+    if (animalArrayIndex < randomAnimals.length) {
+        console.log(randomAnimals[animalArrayIndex]); // Logs the current animal in the array
+        animalArrayIndex++; // Increment the index to log the next animal
     } else {
         clearInterval(intervalId); // Stops the interval when all animals have been logged
     }

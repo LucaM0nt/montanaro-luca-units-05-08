@@ -1,3 +1,28 @@
+/** 
+ * Problemi e criticità della consegna:
+ * 1. Dungeons and dragons non è un gioco di carte, ma un gioco di ruolo da tavolo. 
+ *  Le carte possono essere intese come una rappresentazione del combat system del gioco,
+ *  ma questo genera altri problemi.
+ * 2. Una rappresentazione del combat system può essere valutata usando le carte come
+ *  azioni, oggetti ed incantesimi che una CREATURA può usare. Non è molto sensato avere
+ *  characters e enemies come 2 categorie di carte.
+ * 3. Anche usandoli come categorie di carte non è chiara la differenziazione tra characters e enemies.
+ * 4. Giocare una sola carta per turno, in uno scenario dove le creature sono una tipologia di carta
+ *  casuale giocabile, non ha senso. Cosa succede se i giocatori non hanno creature sul campo?
+ * 5. Cosa dovrebbe succedere se un giocatore continua a non pescare creature? 
+ * 6. Se si gioca una sola carta a turno, l'idea è che le creature si accumulino sul campo,
+ * aggiungendo anche il dover scegliere un target, oppure vengono usate e svaniscano? Perchè
+ * in questo secondo caso non avrebbe senso.
+ * 
+ * Soluzione proposta: 2 pool di carte diverse: creature e spell/azioni/oggetti.
+ * 1 creatura per giocatore sul campo, che può essere attaccata e attacca ogni turno.
+ * Quando muore viene rimpiazzata dalla prossima. 
+ * Ogni turno si usa la prima carta del mazzo spell/azioni/oggetti.
+ * 
+*/
+
+// carte con azioni e effetti
+// Ogni carta ha un nome, un tipo (creature, magic, item), un attacco, punti vita e un'azione
 const cards = [
   {
     name: "Fire Dragon",
@@ -107,7 +132,7 @@ const cards = [
     name: "Shadow Curse",
     type: "magic",
     effectDescription: "reduces enemy attack by 3 for 3 turns",
-    effectValue: 2,
+    effectValue: 3,
     effectTimer: 3,
     action: function (target) {
         target.attack -= this.effectValue;
@@ -166,16 +191,27 @@ const cards = [
   },
 ];
 
+// Ogni giocatore ha un mazzo di carte e un punteggio, al momento ci sono delle carte di prova
 let player1Deck = ["card1", "card2", "card3", "card4", "card5"];
 let player2Deck = ["card6", "card7", "card8", "card9", "card10"];
 let player1Score = 0;
 let player2Score = 0;
 
+//carta attiva di ciascun giocatore
+let player1ActiveCard = null;
+let player2ActiveCard = null;
+
+// pescare carta da mazzo
 function drawCard(playerDeck) {
   let currentCard = playerDeck.shift();
   return currentCard;
 }
 
+// giocare carta e target
 function playCard(card, target) {
   card.action(target);
+}
+
+function turn(){
+
 }

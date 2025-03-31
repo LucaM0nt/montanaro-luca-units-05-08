@@ -15,16 +15,23 @@
  * Creates a custom interval that repeatedly executes a callback function after a specified delay.
  * @param {Function} callback - The function to be executed repeatedly.
  * @param {number} delay - The delay in milliseconds between each execution of the callback.
+ * @param {number} [times=Infinity] - The number of times the callback should be executed before stopping automatically.
  * @returns {Object} - An object containing the interval ID, which can be used to clear the interval.
  * @example
- * const myIntervalId = setMyInterval(() => console.log("Hello"), 2000); // Logs "Hello" every 2 seconds
+ * const myIntervalId = setMyInterval(() => console.log("Hello"), 2000, 15); // Logs "Hello" 15 times
  */
-function setMyInterval(callback, delay) {
+function setMyInterval(callback, delay, times = Infinity) {
     const interval = { id: null };
+    let count = 0;
 
     function repeat() {
-        callback();
-        interval.id = setTimeout(repeat, delay);
+        if (count < times) {
+            callback();
+            count++;
+            interval.id = setTimeout(repeat, delay);
+        } else {
+            clearMyInterval(interval);
+        }
     }
 
     interval.id = setTimeout(repeat, delay);
@@ -36,8 +43,8 @@ function setMyInterval(callback, delay) {
  * @param {Object} interval - The interval object returned by `setMyInterval`.
  * @returns {void}
  * @example
- * const myIntervalId = setMyInterval(() => console.log("Hello"), 2000);
- * setTimeout(() => clearMyInterval(myIntervalId), 8000); // Stops the interval after 8 seconds
+ * const myIntervalId = setMyInterval(() => console.log("Hello"), 2000, 15);
+ * setTimeout(() => clearMyInterval(myIntervalId), 10000); // Stops the interval after 10 seconds
  */
 function clearMyInterval(interval) {
     clearTimeout(interval.id);
@@ -53,7 +60,4 @@ function sayHello() {
     console.log("Hello");
 }
 
-const myIntervalId = setMyInterval(sayHello, 2000); // Logs "Hello" every 2 seconds
-
-// Clears the interval after 8 seconds
-setTimeout(() => clearMyInterval(myIntervalId), 8000);
+const myIntervalId = setMyInterval(sayHello, 2000, 15); // Logs "Hello" 15 times
