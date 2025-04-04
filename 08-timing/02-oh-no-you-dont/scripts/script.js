@@ -44,4 +44,6 @@ function cancelTimer() {
 }
 
 // Set a timeout to cancel the timer after 5 seconds
+// If I really wanted, I could ha assined this set timeout return to a variable to get the id, 
+// so that I could cancel the canceling function too.
 setTimeout(cancelTimer, 5000);

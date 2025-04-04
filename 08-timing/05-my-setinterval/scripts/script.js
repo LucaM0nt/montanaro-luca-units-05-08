@@ -21,6 +21,7 @@
  * const myIntervalId = setMyInterval(() => console.log("Hello"), 2000, 15); // Logs "Hello" 15 times
  */
 function setMyInterval(callback, delay, times = Infinity) {
+    // using an object because of the difference of passing values vs. references as parameters
     const interval = { id: null };
     let count = 0;
 

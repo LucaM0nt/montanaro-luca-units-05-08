@@ -19,6 +19,7 @@
  */
 function getSecondsToTomorrow() {
   let now = new Date();
+  // I get the date of tomorrow at midnight. Omitting the time gets the time at midnight (00:00:00).
   let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
   let secondsToTomorrow = Math.round((tomorrow - now) / 1000);
   return `There are ${secondsToTomorrow} seconds left until tomorrow.`;

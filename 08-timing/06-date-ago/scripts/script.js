@@ -26,6 +26,7 @@
 function getDateAgo(date, days) {
     if (days < 0) return 'Invalid day, use positive numbers';
     let newDate = new Date(date);
+    // setDate changes only the day of the month, getDate returns the day of the month
     newDate.setDate(newDate.getDate() - days);
     return newDate.getDate();
 }
