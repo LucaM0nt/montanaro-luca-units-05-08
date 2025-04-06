@@ -1,4 +1,45 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>script.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#attack">attack</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#buff">buff</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#createDeck">createDeck</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#damage">damage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#describePlay">describePlay</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#drawCard">drawCard</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#duel">duel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getRandomInt">getRandomInt</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#performAction">performAction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#playGame">playGame</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#possibleCards">possibleCards</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">script.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * @file script.js
  * @description This file contains the implementation of a card-based combat game where players use decks of cards to battle each other. Cards can represent characters, spells, or enemies, each with unique actions and effects.
  * @date March 2025
@@ -90,7 +131,7 @@ function duel(target) {
     target.health = 0;
     console.log(`${this.name} wins the duel vs ${target.name}.`);
     return target.health;
-  } else if (myScore < oppScore) {
+  } else if (myScore &lt; oppScore) {
     // Se è inferiore, perde il giocatore attivo
     this.health = 0;
     console.log(`${target.name} wins the duel vs ${this.name}.`);
@@ -208,7 +249,7 @@ function createDeck(size) {
   const deck = [];
   const types = Object.keys(possibleCards); // ['character', 'spell', 'enemy']
 
-  for (let i = 0; i < size; i++) {
+  for (let i = 0; i &lt; size; i++) {
     const type = types[getRandomInt(0, types.length - 1)];
     const templates = possibleCards[type];
     const randomCard = templates[getRandomInt(0, templates.length - 1)];
@@ -249,7 +290,7 @@ function performAction(card, target) {
   if (!card || !target) return 0;
 
   // Personaggio contro nemico → attacca
-  if (card.type === "character" && target.type === "enemy") {
+  if (card.type === "character" &amp;&amp; target.type === "enemy") {
     return card.attack?.(target) || 0;
   }
 
@@ -262,20 +303,20 @@ function performAction(card, target) {
       );
       return 0;
     }
-    if (card.effect === "buff" && card.buff) return card.buff(target);
-    if (card.effect === "damage" && card.damage) return card.damage(target);
+    if (card.effect === "buff" &amp;&amp; card.buff) return card.buff(target);
+    if (card.effect === "damage" &amp;&amp; card.damage) return card.damage(target);
     console.log(`${card.name} has no effect on ${target.name}.`);
     return 0;
   }
 
   // Duello tra personaggi
-  if (card.type === "character" && target.type === "character") {
+  if (card.type === "character" &amp;&amp; target.type === "character") {
     return card.duel?.(target) || 0;
   }
 
   // Nemico contro altro personaggio o altro nemico → attacca
   if (
-    card.type === "enemy" &&
+    card.type === "enemy" &amp;&amp;
     (target.type === "character" || target.type === "enemy")
   ) {
     return card.attack?.(target) || 0;
@@ -298,7 +339,7 @@ function playGame(deck1, deck2) {
   let turn = 1;
 
   // Finché entrambi hanno carte
-  while (deck1.length && deck2.length) {
+  while (deck1.length &amp;&amp; deck2.length) {
     console.log(`\n--- Turn ${turn} ---`);
     const card1 = drawCard(deck1);
     const card2 = drawCard(deck2);
@@ -336,4 +377,22 @@ const player1Deck = createDeck(deckSize);
 const player2Deck = createDeck(deckSize);
 
 // Avvia il gioco
-playGame(player1Deck, player2Deck);
+playGame(player1Deck, player2Deck);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Sun Apr 06 2025 17:28:06 GMT+0200 (Ora legale dell’Europa centrale) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
