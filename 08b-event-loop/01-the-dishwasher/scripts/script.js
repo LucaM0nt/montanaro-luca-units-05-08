@@ -93,7 +93,7 @@ function loadDishes(dirtyDishesStack, stackId) {
   console.log(`Loading dishes for stack ${stackId}...`);
 
   // Load a random number of dirty dishes between 10 and 50
-  const dishesNumber = Math.floor(Math.random() * 3) + 5;
+  const dishesNumber = Math.floor(Math.random() * 41) + 10;
 
   for (let i = 1; i <= dishesNumber; i++) {
     dirtyDishesStack.push(`dish-${stackId}-${i}`);
